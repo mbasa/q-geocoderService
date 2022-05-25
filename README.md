@@ -1,4 +1,4 @@
-# q-geocoderservice Project
+# q-geocoderService Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
