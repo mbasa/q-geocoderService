@@ -90,6 +90,7 @@ public class GeocoderResultBean {
         return jaddr.toString();
         
     }
+    
     public static Map<String,Object> createJson(Row row) {
         GeocoderResultBean grb = new GeocoderResultBean();
         
@@ -118,6 +119,16 @@ public class GeocoderResultBean {
         map.put("result", grb);
         
         return map;                                
+    }
+    
+    public static String createJsonList(Row row) {
+        
+        StringBuffer sb = new StringBuffer();
+        sb.append("{\"result\":");
+        sb.append(row.getString(0) != null ? row.getString(0) : "[]" );
+        sb.append("}");
+        
+        return sb.toString();        
     }
 
     /**
